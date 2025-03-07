@@ -5,35 +5,33 @@ import socket
 import pwinput
 
 name_devices = socket.gethostname()
-# while True:
-if "help" :
-    # === password ===    
-    os.system("clear")
-    print("          DIRECTORY BRUTE FORCE")
+# === password ===    
+os.system("cls" if os.name == "nt" else "clear")
+print("          DIRECTORY BRUTE FORCE")
+print()
+password = pwinput.pwinput("PASSWORD 🔐: ",mask="*")
+if password.lower() == "b7tvbt34tmhdyqw6":
+    # === menu ===        
+    os.system("cls" if os.name == "nt" else "clear")
+    print("                       DBF")
+    print("          ──────────────────────────────")
+    print("              DIRECTORY BRUTE FORCE")
+    print("                      V1.0.1")
+    print("                   cyborg-prjkt")
+    print("          ──────────────────────────────")
     print()
-    password = pwinput.pwinput("PASSWORD 🔐: ",mask="*")
-    if password == "b7tvbt34tmhdyqw6":
-        # === menu ===        
-        os.system("clear")
-        print("                       DBF")
-        print("          ──────────────────────────────")
-        print("              DIRECTORY BRUTE FORCE")
-        print("                      V1.0.1")
-        print("                   cyborg-prjkt")
-        print("          ──────────────────────────────")
-        print()
-        print("               url example: site.com")
-        print()
-        print("┌──( @"+name_devices+" )-[~/DBF]")
-        print("│")
-        url = input("└─$ URL ")
+    print("       ex: https://site.com | http://site.com")
+    print()
+    print("┌──( @"+name_devices+" )-[~/DBF]")
+    print("│")
+    url = input("└─$ URL ")
 
-        with open("worldlist.txt", "r") as file:
-            file = [line.strip() for line in file.readlines()]
+    wrdlst = "worldlist.txt"
+    with open(wrdlst, 'r') as file:
+        worldlist = [line.strip() for line in file.readlines()]
 
-
-        for word in file:
-            dbf = url + "/" + word
-            response = requests.get(dbf)
-            if response.status_code == 200:
-                print("[+] {dbf} - {response.status_code}")       
+    for word in worldlist:
+        dbf = url + "/" + word
+        response = requests.get(dbf)
+        if response.status_code == 200:
+            print("[+] {dbf} - {response.status_code}")    
