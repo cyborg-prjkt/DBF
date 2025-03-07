@@ -26,9 +26,8 @@ if "help" :
         print()
         print("┌──( @"+name_devices+" )-[~/DBF]")
         print("│")
-        url = input("├─$ URl ")
-        print("│")
-        wordlist = input("└─$ WORDLIST ")
+        url = input("└─$ URL ")
+        wordlist = "wordlist.txt"
 
         with open(wordlist, "r") as file:
             file = [line.strip() for line in file.readlines()]
