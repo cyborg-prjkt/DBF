@@ -31,7 +31,13 @@ if password.lower() == "b7tvbt34tmhdyqw6":
         worldlist = [line.strip() for line in file.readlines()]
 
     for word in worldlist:
-        dbf = url + "/" + word
+        dbf = url + "/" + word + ".php"
+        dbf1 = url + "/" + word
+        dbf2 = url + "/" + word + ".html"
         response = requests.get(dbf)
+        response = requests.get(dbf1)
+        response = requests.get(dbf2)
         if response.status_code == 200:
-            print("[+] {dbf} - {response.status_code}")    
+            print(f"[+] {dbf} - {response.status_code}")
+            print(f"[+] {dbf1} - {response.status_code}")
+            print(f"[+] {dbf2} - {response.status_code}")
