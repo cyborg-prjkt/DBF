@@ -9,26 +9,26 @@ name_devices = socket.gethostname()
 if "help" :
     # === password ===    
     os.system("clear")
-    print(f"          DIRECTORY BRUTE FORCE")
+    print("          DIRECTORY BRUTE FORCE")
     print()
-    password = pwinput.pwinput(f"PASSWORD 🔐: ",mask="*")
+    password = pwinput.pwinput("PASSWORD 🔐: ",mask="*")
     if password == "b7tvbt34tmhdyqw6":
         # === menu ===        
         os.system("clear")
-        print(f"                       DBF")
-        print(f"          ──────────────────────────────")
-        print(f"              DIRECTORY BRUTE FORCE")
-        print(f"                      V1.0.1")
-        print(f"                   cyborg-prjkt")
-        print(f"          ──────────────────────────────")
+        print("                       DBF")
+        print("          ──────────────────────────────")
+        print("              DIRECTORY BRUTE FORCE")
+        print("                      V1.0.1")
+        print("                   cyborg-prjkt")
+        print("          ──────────────────────────────")
         print()
-        print(f"               url example: site.com")
+        print("               url example: site.com")
         print()
-        print(f"┌──( @"+name_devices+" )-[~/DBF]")
-        print(f"│")
-        url = input(f"├─$ URl ")
-        print(f"│")
-        wordlist = input(f"└─$ WORDLIST ")
+        print("┌──( @"+name_devices+" )-[~/DBF]")
+        print("│")
+        url = input("├─$ URl ")
+        print("│")
+        wordlist = input("└─$ WORDLIST ")
 
         with open(wordlist, "r") as file:
             file = [line.strip() for line in file.readlines()]
@@ -38,4 +38,4 @@ if "help" :
             dbf = url + "/" + word
             response = requests.get(dbf)
             if response.status_code == 200:
-                print(f"[+] {dbf} - {response.status_code}")       
+                print("[+] {dbf} - {response.status_code}")       
