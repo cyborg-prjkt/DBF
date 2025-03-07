@@ -2,6 +2,7 @@ import requests
 from time import sleep
 import os
 import socket
+import pwinput
 
 name_devices = socket.gethostname()
 # while True:
@@ -10,7 +11,7 @@ if "help" :
     os.system("clear")
     print(f"          DIRECTORY BRUTE FORCE")
     print()
-    password = input(f"PASSWORD 🔐: ")
+    password = pwinput.pwinput(f"PASSWORD 🔐: ",mask="*")
     if password == "b7tvbt34tmhdyqw6":
         # === menu ===        
         os.system("clear")
