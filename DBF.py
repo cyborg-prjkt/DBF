@@ -7,13 +7,13 @@ name_devices = socket.gethostname()
 # while True:
 if "help" :
     # === password ===    
-    os.system("cls")
+    os.system("clear")
     print(f"          DIRECTORY BRUTE FORCE")
     print()
     password = input(f"PASSWORD 🔐: ")
     if password == "b7tvbt34tmhdyqw6":
         # === menu ===        
-        os.system("cls")
+        os.system("clear")
         print(f"                       DBF")
         print(f"          ──────────────────────────────")
         print(f"              DIRECTORY BRUTE FORCE")
